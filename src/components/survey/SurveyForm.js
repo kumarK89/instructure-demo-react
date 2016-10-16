@@ -5,7 +5,7 @@ const SurveyForm = (props) => (
 		<h1>{props.surveyName}</h1>
 		<ol>
 			{
-				props.surveyQuestions.map(function(item,index)
+				props.surveyQuestions.map(function(item)
 				{
 					return (
 						<li key={item.qtnTxt}>
