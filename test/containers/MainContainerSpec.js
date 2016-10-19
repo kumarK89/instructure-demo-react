@@ -17,4 +17,9 @@ describe('<MainContainer />', function () {
       wrapper.find('li').at(1).simulate('click');
       expect(wrapper.find('p')).to.length(1);
    })
+
+   it('Test when there are no modules', function () {
+         const wrapper = mount(〈MainContainer items={ [] } /〉);
+         expect(wrapper.find('li')).to.length(1);
+   })
 });
