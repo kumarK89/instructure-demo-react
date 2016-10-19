@@ -1,13 +1,11 @@
 import axios from 'axios';
 import logCustomMessage from './logCustomMessage';
 
-var _BASE_URL = 'http://localhost:8090/';
-
 var helpers = {
 	getSurveys : function(usrId){
-		return axios.get(_BASE_URL+'user/getSurveyDetails?usrId='+usrId)
+		return axios.get('/user/getSurveyDetails?usrId='+usrId)
 		.then(function(response){
-			if(response.data.status === 'Success'){
+			if(response.data.status === 'SUCCESS'){
 				return response.data.data.surveyDtos;
 			}else{
 				return logCustomMessage(response.data.errors , {
@@ -24,10 +22,9 @@ var helpers = {
 		});
 	},
 	getSurveyQuestion : function(usrId,srvyId){
-		return axios.get(_BASE_URL+
-			'user/getUserSurveyQustions?usrId='+usrId+'&srvyId='+srvyId)
+		return axios.get('/user/getUserSurveyQustions?usrId='+usrId+'&srvyId='+srvyId)
 			.then(function(response){
-				if(response.data.status === 'Success'){
+				if(response.data.status === 'SUCCESS'){
 					return response.data.data;
 				}else{
 					return logCustomMessage(response.data.errors , {
