@@ -5,11 +5,6 @@ import SurveyForm from '../../../src/components/survey/SurveyForm';
 
 
 describe('<SurveyForm />', function () {
-	// let a1= ['a','b','c'];
-	// let a2= ['a','b','c'];
-	// let surveyQuestionss =  [a1,a2];
-	//let surveyNames = 'a';
-//	var propss = ;
   
   it('should have two buttons one is submit and other is reset', function () {
   	var array = [  
